@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 my $username = $ARGV[0];
-my $socket = $ARGV[1];
-
+my $option = $ARGV[1];
 
 ### _____________________________________________________________________________________________
 ### subroutines
@@ -60,9 +59,11 @@ if(!defined($username)) { die "username is not defined!";}
 print $username."\n";
 copyService($username);
 
-if(!defined($socket)) { 
+if(!defined($option)) {
     runService($username);
-} else {
+} else if($option eq "socket") { 
     copySocket($username);
     runSocket($username);
+} else if($option ne "norun") {
+    runService($username);
 }
