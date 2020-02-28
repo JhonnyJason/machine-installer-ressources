@@ -61,9 +61,9 @@ copyService($username);
 
 if(!defined($option)) {
     runService($username);
-} else if($option eq "socket") { 
+} elsif($option eq "socket") { 
     copySocket($username);
     runSocket($username);
-} else if($option ne "norun") {
+} elsif($option ne "norun") {
     runService($username);
 }
