@@ -1,5 +1,6 @@
 [Socket]
 ListenFIFO=/run/executor.sk
+SocketMode=0622
 
 [Install]
 WantedBy=sockets.target
