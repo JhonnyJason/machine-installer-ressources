@@ -3,7 +3,8 @@ Description=A service reading commands from the given socket
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/perl /root/commander.pl
+ExecStart=/usr/bin/perl /root/executor.pl
+TimeoutStartSec=90
 
 StandardInput=socket
 StandardOutput=journal 

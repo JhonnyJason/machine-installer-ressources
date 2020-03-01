@@ -1,5 +1,5 @@
 [Socket]
-ListenFIFO=/run/commander.sk
+ListenFIFO=/run/executor.sk
 
 [Install]
 WantedBy=sockets.target
